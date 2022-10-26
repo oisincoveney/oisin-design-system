@@ -10,9 +10,8 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "*"
-      ]
+      "~/*": ["*"],
+      "@divriots/tailwindcss/*": ["*"]
     }
   }
 }

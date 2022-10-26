@@ -13,11 +13,16 @@
   },
   "types": "index.d.ts",
   "dependencies": {
+    "@floating-ui/core": "^1.0.1",
+    "@floating-ui/dom": "^1.0.3",
+    "lodash": "^4.17.21",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@divriots/dockit-core": "^0.9.1",
     "@divriots/dockit-vue": "^0.0.23",
+    "@tailwindcss/typography": "0.5.0-alpha.2",
+    "@types/lodash": "^4.14.186",
     "@vue/test-utils": "^2.0.0-rc.17",
     "prettier": "^2.3.2"
   }

@@ -1,0 +1,140 @@
+@use "sass:map";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../../colors/src/colors";
+@import "../../text/src/index";
+
+@import "../../typography/src/typography";
+
+
+
+#app,
+body {
+  @apply tw-overflow-hidden tw-h-screen tw-w-screen tw-bg-gray-100;
+}
+
+body {
+  // font-family: "Plus Jakarta Sans", sans-serif;
+  //font-family: "Archivo", sans-serif;
+   font-family: "Inter", sans-serif;
+  // font-family: "Roboto", sans-serif;
+  // font-family: "Source Sans Pro", sans-serif;
+}
+
+$colorMap: (
+        "default": $default-colors,
+        "standout": $standout-colors,
+        "outline": $outline-colors,
+        "flat": $flat-colors,
+);
+
+$tokens: ["background", "text", "border", "opacity"];
+$hoverTokens: ["backgroundHover", "textHover", "borderHover"];
+
+@mixin alv-token-classes($colorValue) {
+  @each $token in $tokens {
+    @if (map.get($colorValue, $token)) {
+      @apply #{map.get($colorValue, $token)};
+    }
+
+    //@if($token == 'border') { // && map.get($colorValue, $token) == null) {
+    //@debug map.get($colorValue, $token);
+    //  @apply tw-border tw-border-transparent;
+    //}
+  }
+
+  @each $hoverToken in $hoverTokens {
+    @if (map.get($colorValue, $hoverToken)) {
+      @apply hover:#{map.get($colorValue, $hoverToken)};
+    }
+  }
+}
+
+@mixin alv-sizes {
+  @each $size, $value in $text-sizes {
+    &.-#{$size} {
+      @apply #{$value};
+    }
+  }
+}
+
+@mixin alv-base {
+  @each $key, $colors in $colorMap {
+    @each $colorKey, $colorValue in $colors {
+      @if ($key == "default") {
+        &--#{$colorKey} {
+          @include alv-token-classes($colorValue);
+          @include alv-sizes;
+        }
+      } @else {
+        &--#{$colorKey}.-#{$key} {
+          @include alv-token-classes($colorValue);
+          @include alv-sizes;
+        }
+      }
+    }
+  }
+}
+
+.alv-btn {
+  @include alv-base;
+
+  @apply tw-rounded;
+   @apply tw-font-medium;
+  @apply tw-whitespace-nowrap;
+  // font-weight: 800;
+  @apply tw-cursor-pointer;
+  @apply tw-transition;
+  @apply tw-flex tw-flex-row tw-justify-center tw-items-center;
+  @apply tw-px-2;
+}
+
+.alv-chip {
+  @include alv-base();
+  @apply tw-rounded-full;
+  // @apply tw-font-medium;
+  @apply tw-whitespace-nowrap;
+  @apply tw-transition;
+  @apply tw-w-fit;
+  @apply tw-flex tw-flex-row tw-justify-center tw-items-center;
+  @apply tw-px-2;
+}
+
+$input-sizes: (
+        "xs": "tw-text-[0.6rem] tw-px-2 tw-h-6",
+        "sm": "tw-text-[0.7rem] tw-px-2 tw-h-7",
+        "md": "tw-text-[0.8rem] tw-px-2 tw-h-8",
+        "lg": "tw-text-[1rem] tw-px-3 tw-h-11",
+        "xl": "tw-text-[1.1rem] tw-px-4 tw-h-12",
+        "xxl": "tw-text-[1.15rem] tw-px-4 tw-h-14",
+        "xxxl": "tw-text-[1.25rem] tw-px-4 tw-h-16",
+        "xxxxl": "tw-text-[1.3rem] tw-px-4  tw-h-20",
+);
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.alv-input {
+  @apply tw-border tw-border-gray-200 tw-border-opacity-75 tw-rounded hover:tw-border-gray-300;
+
+  @each $size, $value in $input-sizes {
+    &.-#{$size} {
+      @apply #{$value};
+
+      &.-icon {
+        @apply tw-pl-8;
+      }
+    }
+  }
+}
+//
+//.alv-dropdown--content {
+//  @apply tw-absolute tw-bg-white tw-border tw-border-gray-300 tw-z-50 tw-rounded tw-shadow-md;
+//}
