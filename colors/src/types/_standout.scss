@@ -1,0 +1,47 @@
+$standout-colors: (
+        "primary": (
+                background: "tw-bg-primary-100",
+                text: "tw-text-primary-900",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "secondary": (
+                background: "tw-bg-primary-500",
+                text: "tw-text-white",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "success": (
+                background: "tw-bg-primary-500",
+                text: "tw-text-white",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "danger": (
+                background: "tw-bg-primary-500",
+                text: "tw-text-white",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "warning": (
+                background: "tw-bg-primary-500",
+                text: "tw-text-white",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "info": (
+                background: "tw-bg-primary-500",
+                text: "tw-text-white",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "light": (
+                background: "tw-bg-primary-500",
+                text: "tw-text-white",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "dark": (
+                background: "tw-bg-primary-500",
+                text: "tw-text-white",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "transparent": (
+                background: "tw-bg-transparent",
+                text: "tw-text-gray-800",
+                backgroundHover: "tw-bg-gray-200 hover:tw-bg-opacity-75",
+        ),
+);

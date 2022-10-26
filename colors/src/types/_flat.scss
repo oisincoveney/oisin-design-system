@@ -1,0 +1,47 @@
+$flat-colors: (
+        "primary": (
+                background: "tw-bg-transparent",
+                text: "tw-text-primary-500",
+                backgroundHover: "tw-bg-primary-300 hover:tw-bg-opacity-50",
+        ),
+        "secondary": (
+                background: "tw-bg-transparent",
+                text: "tw-text-alvin-purple-500",
+                backgroundHover: "tw-bg-alvin-purple-500 hover:tw-bg-opacity-50",
+        ),
+        "success": (
+                background: "tw-bg-transparent",
+                text: "tw-text-alvin-green",
+                backgroundHover: "tw-bg-alvin-green-300 hover:tw-bg-opacity-50",
+        ),
+        "danger": (
+                background: "tw-bg-transparent",
+                text: "tw-text-red-500",
+                backgroundHover: "tw-bg-red-300 hover:tw-bg-opacity-50",
+        ),
+        "warning": (
+                background: "tw-bg-transparent",
+                text: "tw-text-alvin-orange-500",
+                backgroundHover: "tw-bg-alvin-orange-500 hover:tw-bg-opacity-50",
+        ),
+        "info": (
+                background: "tw-bg-transparent",
+                text: "tw-text-yellow-600",
+                backgroundHover: "tw-bg-yellow-600 hover:tw-bg-opacity-50",
+        ),
+        "light": (
+                background: "tw-bg-transparent",
+                text: "tw-text-gray-800",
+                backgroundHover: "tw-bg-gray-300 hover:tw-bg-opacity-50",
+        ),
+        "dark": (
+                background: "tw-bg-transparent",
+                text: "tw-text-gray-200",
+                backgroundHover: "tw-bg-gray-200 hover:tw-bg-opacity-50",
+        ),
+        "transparent": (
+                background: "tw-bg-transparent",
+                text: "tw-text-gray-800",
+                backgroundHover: "tw-bg-gray-200 hover:tw-bg-opacity-75",
+        ),
+);

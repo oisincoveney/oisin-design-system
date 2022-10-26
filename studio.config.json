@@ -16,8 +16,35 @@
           "theme"
         ]
       ],
-      ["components", ["button", "icon"]],
-      ["infrastructure", ["doc-layout", "types"]]
+      [
+        "components",
+        [
+          "AlvAlert",
+          "AlvAvatar",
+          "AlvButton",
+          "AlvButtonGroup",
+          "AlvCard",
+          "AlvChip",
+          "AlvDialog",
+          "AlvDropdown",
+          "AlvForm",
+          "AlvIcon",
+          "AlvInput",
+          "AlvList",
+          "AlvListItem",
+          "AlvLoader",
+          "AlvTable",
+          "AlvTabs",
+          "AlvTooltip"
+        ]
+      ],
+      [
+        "infrastructure",
+        [
+          "doc-layout",
+          "types"
+        ]
+      ]
     ]
   },
   "doc": {
