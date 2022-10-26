@@ -1,0 +1,24 @@
+{
+  "name": "@backlight-dev/alvin-design.vue3-5zzi11c81l9pfzaad",
+  "version": "0.2.0",
+  "description": "",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "{{ homepage }}",
+  "scripts": {
+    "serve": "npx backlight@latest serve vRdOUKIRrbQ6xGJycIhL --open"
+  },
+  "exports": {
+    ".": "./index.js"
+  },
+  "types": "index.d.ts",
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@divriots/dockit-core": "^0.9.1",
+    "@divriots/dockit-vue": "^0.0.23",
+    "@vue/test-utils": "^2.0.0-rc.17",
+    "prettier": "^2.3.2"
+  }
+}
